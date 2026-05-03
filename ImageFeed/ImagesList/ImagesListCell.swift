@@ -6,20 +6,20 @@
 //
 import UIKit
 
-// настройка кастомной ячейки
+/// Кастомная ячейка списка изображений
 final class ImagesListCell: UITableViewCell {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     
-    //MARK: - Properties
-    static let reuseIdentifier: String = "ImagesListCell"
+    // MARK: - Properties
+    static let reuseIdentifier = "ImagesListCell"
     private let gradientLayer = CAGradientLayer()
     
-    //MARK: - LifeCycle
-    //однократная настройка ячейки после создания
+    // MARK: - LifeCycle
+    ///однократная настройка ячейки после создания
     override func awakeFromNib() {
         super.awakeFromNib()
         cellImage.layer.cornerRadius = 16
@@ -27,13 +27,13 @@ final class ImagesListCell: UITableViewCell {
         setupGradientLayer()
     }
     
-    // обновление размеров дочерних элементов ячейки
+    /// обновление размеров дочерних элементов ячейки
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = cellImage.bounds //обновить размер градиента при изменении размера ячейки
+        gradientLayer.frame = cellImage.bounds
     }
     
-    // сброс данных при переиспользовании ячейки
+    /// сброс данных при переиспользовании ячейки
     override func prepareForReuse() {
         super.prepareForReuse()
         cellImage.image = nil
@@ -41,8 +41,8 @@ final class ImagesListCell: UITableViewCell {
         dateLabel.text = nil
     }
     
-    //MARK: - Methods
-    // настройка градиента (от прозрачного к черному)
+    // MARK: - Methods
+    /// настройка градиента (от прозрачного к черному)
     private func setupGradientLayer() {
         gradientLayer.colors = [UIColor.clear.cgColor,
                                 UIColor.ypBlackIOS.withAlphaComponent(0.5).cgColor]
@@ -50,7 +50,7 @@ final class ImagesListCell: UITableViewCell {
         cellImage.layer.addSublayer(gradientLayer)
     }
  
-    //MARK: - Actions
+    // MARK: - Actions
     @IBAction func likeButtonTap(_ sender: UIButton) { }
     
     
