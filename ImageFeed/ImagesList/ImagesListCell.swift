@@ -51,9 +51,7 @@ final class ImagesListCell: UITableViewCell {
     }
  
     //MARK: - Actions
-    @IBAction func likeButtonTap(_ sender: UIButton) {
-        sender.isSelected.toggle()
-    }
+    @IBAction func likeButtonTap(_ sender: UIButton) { }
     
     
 }
