@@ -31,6 +31,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="O1H-iW-ckt" userLabel="Cell Image">
                                                     <rect key="frame" x="16" y="4" width="361" height="244"/>
                                                     <color key="backgroundColor" name="YP Black (iOS)"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="image" label="image"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-Si-30J">
                                                     <rect key="frame" x="333" y="4" width="44" height="44"/>
@@ -68,6 +69,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="YP Black (iOS)"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ImagesListCell"/>
                                         <connections>
                                             <outlet property="cellImage" destination="O1H-iW-ckt" id="IbN-44-n6z"/>
                                             <outlet property="dateLabel" destination="UqV-Gh-ZZN" id="8ut-oX-8by"/>
