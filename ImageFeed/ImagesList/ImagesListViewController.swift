@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class ImagesListViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -22,6 +21,7 @@ final class ImagesListViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
