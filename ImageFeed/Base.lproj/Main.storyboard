@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T3e-9G-wCE">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
@@ -8,6 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hdh-fx-Sgs">
+            <objects>
+                <tabBarController id="T3e-9G-wCE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iGO-ID-2n2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="YP White (iOS)"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="YP Black (iOS)"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ztQ-Sp-hjg"/>
+                        <segue destination="Cxy-aR-fVx" kind="relationship" relationship="viewControllers" id="s4M-wy-IuA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynD-HJ-Op4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191" y="138"/>
+        </scene>
         <!--ImagesList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -92,13 +114,14 @@
                             <constraint firstItem="KiZ-sT-dYD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hBx-c2-afV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="iQo-Sc-mL9"/>
                     <connections>
                         <outlet property="tableView" destination="KiZ-sT-dYD" id="8Ez-3H-7l8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064.885496183206" y="130.98591549295776"/>
+            <point key="canvasLocation" x="-343" y="-313"/>
         </scene>
         <!--Profile-->
         <scene sceneID="e0I-qq-Oeq">
@@ -151,26 +174,8 @@
                                 <color key="textColor" name="YP White (iOS)"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-1x-EXl" userLabel="Images List screen">
-                                <rect key="frame" x="16" y="762" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="WX2-1x-EXl" secondAttribute="height" multiplier="1:1" id="6K7-Jg-ftI"/>
-                                    <constraint firstAttribute="width" constant="44" id="kVe-C9-MHA"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="No Active"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nw-LD-L4q" userLabel="Profile screen">
-                                <rect key="frame" x="342" y="762" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4nw-LD-L4q" secondAttribute="height" multiplier="1:1" id="AHF-U9-ksY"/>
-                                    <constraint firstAttribute="width" constant="44" id="XHA-9t-1Wc"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Active"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No Photo" translatesAutoresizingMaskIntoConstraints="NO" id="R9E-Xw-Ewv" userLabel="Logo">
-                                <rect key="frame" x="143.66666666666666" y="407.66666666666669" width="114.99999999999997" height="115.00000000000006"/>
+                                <rect key="frame" x="143.66666666666666" y="383" width="114.99999999999997" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="O8a-KH-Qe3"/>
                                     <constraint firstAttribute="width" secondItem="R9E-Xw-Ewv" secondAttribute="height" multiplier="1:1" id="Oc3-tb-BJe"/>
@@ -188,18 +193,15 @@
                             <constraint firstItem="RPI-qY-4dT" firstAttribute="top" secondItem="u40-Ii-0FW" secondAttribute="bottom" constant="8" id="Ddy-5R-55w"/>
                             <constraint firstItem="uXx-eT-2VV" firstAttribute="leading" secondItem="nnF-hZ-To5" secondAttribute="leading" constant="16" id="SRf-0b-0YD"/>
                             <constraint firstItem="xma-8E-rRT" firstAttribute="leading" secondItem="nnF-hZ-To5" secondAttribute="leading" constant="16" id="V91-uK-pa8"/>
-                            <constraint firstItem="nnF-hZ-To5" firstAttribute="trailing" secondItem="4nw-LD-L4q" secondAttribute="trailing" constant="16" id="VA3-fX-OxA"/>
                             <constraint firstItem="nnF-hZ-To5" firstAttribute="trailing" secondItem="kHr-JM-tty" secondAttribute="trailing" constant="16" id="Xlk-C3-2X3"/>
-                            <constraint firstItem="nnF-hZ-To5" firstAttribute="bottom" secondItem="WX2-1x-EXl" secondAttribute="bottom" id="YfV-5w-hPa"/>
-                            <constraint firstItem="nnF-hZ-To5" firstAttribute="bottom" secondItem="4nw-LD-L4q" secondAttribute="bottom" id="e26-fR-TGb"/>
                             <constraint firstItem="n6A-hP-WZt" firstAttribute="top" secondItem="xma-8E-rRT" secondAttribute="bottom" constant="24" id="gxc-Vx-AxQ"/>
                             <constraint firstItem="u40-Ii-0FW" firstAttribute="top" secondItem="uXx-eT-2VV" secondAttribute="bottom" constant="8" id="j0A-n8-ldd"/>
                             <constraint firstItem="R9E-Xw-Ewv" firstAttribute="centerX" secondItem="nnF-hZ-To5" secondAttribute="centerX" id="qe6-Bh-WE5"/>
                             <constraint firstItem="RPI-qY-4dT" firstAttribute="leading" secondItem="nnF-hZ-To5" secondAttribute="leading" constant="16" id="wRP-yT-IR5"/>
-                            <constraint firstItem="WX2-1x-EXl" firstAttribute="leading" secondItem="nnF-hZ-To5" secondAttribute="leading" constant="16" id="wzj-Gu-NaL"/>
                             <constraint firstItem="xma-8E-rRT" firstAttribute="top" secondItem="RPI-qY-4dT" secondAttribute="bottom" constant="8" id="xSW-rx-wCf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="8eW-ZZ-3Xs"/>
                     <connections>
                         <outlet property="avatarImageView" destination="uXx-eT-2VV" id="Aii-5c-iek"/>
                         <outlet property="descriptionLabel" destination="xma-8E-rRT" id="35g-gP-jUQ"/>
@@ -210,17 +212,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqo-hB-m9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.58015267175574" y="200"/>
+            <point key="canvasLocation" x="-343" y="378"/>
         </scene>
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
-        <image name="Active" width="75" height="49"/>
-        <image name="No Active" width="75" height="49"/>
         <image name="No Photo" width="115" height="115"/>
         <image name="Photo" width="70" height="70"/>
         <image name="exit" width="20" height="22"/>
         <image name="like_button_off" width="44" height="44"/>
+        <image name="tab_editorial_active" width="30" height="30"/>
+        <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YP Black (iOS)">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
